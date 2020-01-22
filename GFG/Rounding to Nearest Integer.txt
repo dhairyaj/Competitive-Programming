@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+void roundup(int n){
+    int a=(n/10) * 10;
+    int b = a + 10;
+    if((n-a)>(b-n))
+        cout<<b;
+    else
+        cout<<a;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    roundup(n);
+}
