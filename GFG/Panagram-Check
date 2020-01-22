@@ -1,0 +1,30 @@
+//Program to check whether given string is panagram or not
+//those strings are panagram which have all letters atleast once
+#include<bits/stdc++.h>
+#include<string.h>
+using namespace std;
+int ispan(string &str){
+    int index;
+    int arr[26] = {0} ;
+    for(int i=0;i<str.length();i++){
+        str[i] = tolower(str[i]);
+        if(str[i]>='a'&&str[i]<='z')
+            index = str[i] - 'a';
+        arr[index] = 1;
+    }
+    for(int i=0;i<26;i++)
+        if(arr[i]==0)
+            return 0;
+    return 1;
+        //cout<<arr[i]<<" ";
+}
+int main(){
+    string str;
+    getline(cin,str);
+    if(ispan(str)==1)
+        cout<<"It's a panagram";
+    else
+        cout<<"It's not a panagram";
+    return 0;
+}
+

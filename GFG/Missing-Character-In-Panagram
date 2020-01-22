@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+#include<string.h>
+using namespace std;
+void missingchar(string &str){
+    int arr[26] = {0};
+    string res = "";
+    for(int i=0;i<str.length();i++){
+        str[i] = tolower(str[i]);
+        if('a'<=str[i] && str[i]<='z')
+            arr[str[i]-'a'] = 1;
+    }
+    for(int i=0;i<=25;i++){
+        if(arr[i]==0)
+            res.push_back((char)i + 'a');
+    }
+    cout<<res;
+}
+int main(){
+    string str;
+    getline(cin,str);
+    missingchar(str);
+}
+
