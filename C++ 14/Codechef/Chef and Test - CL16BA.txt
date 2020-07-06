@@ -1,0 +1,20 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+	int t,n,m;
+	cin>>t;
+	for(int i=0;i<t;i++){
+	    cin>>n>>m;
+	    int a[n];
+	    for(int j=0;j<n;j++)
+	        cin>>a[j];
+	   sort(a,a+n);
+	   if(a[n-1]>=m)
+	        cout<<a[n-1]<<endl;
+	   else
+	        cout<<"RESIGN"<<endl;
+	}
+	return 0;
+}
