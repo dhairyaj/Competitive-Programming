@@ -1,0 +1,18 @@
+s=input()
+c=''
+flag='a'
+for i in s :
+    if(i=='G'):
+        c+='C'
+    elif(i=='C'):
+        c+='G'
+    elif(i=='T'):
+        c+='A'
+    elif(i=='A'):
+        c+='U'
+    else:
+        print("Invalid Input")
+        flag='b'
+        break
+if(flag=='a'):
+    print(c)
